@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About Us - Homeland Clone</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Internal CSS -->
+  <style>
+    body {font-family:'Nunito Sans', Arial, sans-serif; margin:0; padding:0; background:#fff;}
+    h1,h2,h3,h4,h5,h6 {margin:0; font-weight:700;}
+    a{text-decoration:none;}
+
+    /* Navbar */
+    .navbar {background:grey; padding:15px 0; position:relative; z-index:1000;}
+    .navbar .container {max-width:1140px; margin:0 auto; padding:0 15px; display:flex; justify-content:space-between; align-items:center;}
+    .navbar h1 a{color:#fff; font-size:28px; font-weight:700;}
+    .navbar nav ul {list-style:none; display:flex; gap:20px; margin:0; padding:0;}
+    .navbar nav a{color:#fff;}
+
+    .hamburger {display:none; font-size:24px; color:#fff; cursor:pointer; z-index:1100;}
+    @media(max-width:768px) {
+      .navbar nav {display:none; position:absolute; top:60px; left:0; width:100%; background:#000; flex-direction:column; padding:20px 0;}
+      .navbar nav ul {flex-direction:column; gap:15px; text-align:center;}
+      .navbar nav.active {display:flex;}
+      .hamburger {display:block;}
+    }
+
+    /* Hero Section */
+    .home-slider {position:relative; width:100%; height:60vh; background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; color:#fff; text-align:center;}
+    .home-slider h1 {font-size:48px; background:rgba(0,0,0,0); padding:15px 30px; border-radius:6px;}
+
+    /* Company Section */
+    .about {padding:60px 20px; max-width:1140px; margin:auto; display:flex; flex-wrap:wrap; gap:40px; align-items:center;}
+    .about img {flex:1; max-width:500px; border-radius:8px;}
+    .about-text {flex:1;}
+    .about-text h2 {font-size:32px; margin-bottom:20px; color:#333;}
+    .about-text p {line-height:1.7; margin-bottom:15px; color:#555;}
+    /* Read More Button */
+.btn-readmore {
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 25px;
+  background:transparent;
+  color:black;
+  font-size:16px;
+  font-weight:600;
+  border-radius:5px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  transition:0.3s ease;
+}
+.btn-readmore:hover {
+  background:#0056b3;
+}
+
+
+/* Leadership Section */
+.agents {padding:60px 20px; text-align:center;}
+.agents h2 {font-size:32px; margin-bottom:40px; color:#333;}
+.agents .grid {display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:30px;}
+.agent {background:#fff; border-radius:8px; overflow:hidden; box-shadow:0 2px 6px rgba(0,0,0,0.1); text-align:left;}
+.agent img {width:100%; height:auto;}
+.agent .info {padding:20px;}
+.agent h4 {margin-bottom:5px;}
+.agent p {color:#777; margin-bottom:15px;}
+.agent .social a {color:#555; margin:0 8px; font-size:18px; transition:0.3s;}
+.agent .social a:hover {color:#8dc63f;}
+
+   /* FAQ Section */
+.faq {background:#fff; padding:80px 20px; text-align:center;}
+.faq h2 {font-size:32px; margin-bottom:20px; font-weight:700; text-transform:uppercase;}
+.faq-desc {max-width:700px; margin:0 auto 40px; color:#666; line-height:1.7;}
+
+.faq .accordion {max-width:800px; margin:auto; text-align:left;}
+.accordion-item {border-bottom:1px solid #eee;}
+.accordion-header {
+  padding:18px 20px;
+  cursor:pointer;
+  font-size:18px;
+  font-weight:500;
+  position:relative;
+  color:#333;
+}
+.accordion-header::after {
+  content:"\25BC"; /* down arrow */
+  position:absolute;
+  right:20px;
+  font-size:14px;
+  transition:transform 0.3s;
+}
+.accordion-header.active::after {transform:rotate(180deg);} /* rotate arrow */
+
+.accordion-content {
+  max-height:0;
+  overflow:hidden;
+  line-height:1.6;
+  color:#555;
+  padding:0 20px;
+  transition:max-height 0.4s ease, padding 0.3s ease;
+}
+.accordion-content.open {padding:15px 20px;}
+
+
+    /* Footer */
+    footer{background:#222; color:#bbb; padding:40px 0;}
+    footer h3{color:#fff; font-size:20px; margin-bottom:15px;}
+    footer a{color:#bbb;}
+    footer .container{max-width:1140px; margin:0 auto; padding:0 15px; display:flex; flex-wrap:wrap; gap:30px;}
+    footer .social a{color:#bbb; font-size:20px; margin-right:15px;}
+    footer .bottom{text-align:center; margin-top:20px; color:#777;}
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="container">
+      <h1><a href="index.html">Homeland<span style="color:#dc3545;">.</span></a></h1>
+      <div class="hamburger"><i class="fas fa-bars"></i></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="buy.html">Buy</a></li>
+          <li><a href="rent.html">Rent</a></li>
+          <li><a href="properties.html">Properties</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="home-slider" style="background-image:url('./hero_bg_2.jpg');">
+    <h1>About Us</h1>
+  </div>
+
+  <!-- Company Section -->
+  <div class="about">
+    <img src="./about.jpg" alt="About Homeland">
+    <div class="about-text">
+      <h2>OUR COMPANY</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus laoreet odio sed sapien fermentum, ac facilisis ligula vestibulum.</p>
+      <p>Donec nec justo eu elit pretium viverra. Integer scelerisque magna non massa varius, et interdum neque tincidunt. Morbi non erat eget magna tempus fermentum.</p>
+      <p>We provide the best platform for buying, renting, and investing in real estate properties with transparency and trust.</p>
+      <a href="about-more.html" class="btn-readmore">Read More</a>
+    </div>
+  </div>
+
+  <!-- Leadership -->
+  <div class="agents">
+    <div class="container">
+      <h2>LEADERSHIP</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero magnam officiis ipsa eum</p>
+      <p>pariatur labore fugit amet eaque iure vitae, repellendus laborum in modi reiciendis quis!</p>
+      <p>Optio minima quibusdam, laboriosam.</p>
+      <div class="grid">
+        <div class="agent">
+            <img src="./person_1.jpg">
+            <div class="info">
+                <h4>Kyle McDonald</h4>
+                <h6>Real Estate Agent</h6>
+                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. Totam atque corporis nisi, veniam non. Tempore cupiditate, vitae minus obcaecati provident beatae!</h6>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="agent">
+            <img src="./person_2.jpg">
+            <div class="info">
+                <h4>Robert Aguilar</h4>
+                <h6>Real Estate Agent</h6>
+                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. Totam atque corporis nisi, veniam non. Tempore cupiditate, vitae minus obcaecati provident beatae!</h6>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="agent">
+            <img src="./person_3.jpg">
+            <div class="info">
+                <h4>John Smith</h4>
+                <h6>Real Estate Agent</h6>
+                <h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dolorem totam non quis facere blanditiis praesentium est. Totam atque corporis nisi, veniam non. Tempore cupiditate, vitae minus obcaecati provident beatae!</h6>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agent Section -->
+<div class="agents">
+  <div class="container">
+    <h2>OUR AGENTS</h2>
+    <p style="max-width:700px; margin:0 auto 40px; color:#666; line-height:1.7;">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero magnam officiis ipsa eum 
+      pariatur labore fugit amet eaque iure vitae, repellendus laborum in modi reiciendis quis!
+      Optio minima quibusdam, laboriosam.
+    </p>
+    <div class="grid">
+      <div class="agent">
+        <img src="./person_4.jpg" alt="Steven Ericson">
+        <div class="info">
+          <h4>Steven Ericson</h4>
+          <p>Real Estate Agent</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates sed qui at harum ipsum earum voluptas a unde error sapiente.</p>
+          <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="agent">
+        <img src="./person_5.jpg" alt="Nathan Dumlao">
+        <div class="info">
+          <h4>Nathan Dumlao</h4>
+          <p>Real Estate Agent</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo nobis commodi rerum dicta, nulla. Delectus neque hic deserunt consequuntur esse facere.</p>
+          <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="agent">
+        <img src="./person_2.jpg" alt="Brooke Cagle">
+        <div class="info">
+          <h4>Brooke Cagle</h4>
+          <p>Real Estate Agent</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa nam tenetur molestiae maiores officiis consectetur, distinctio aperiam in illum praesentium corrupti.</p>
+          <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+
+  <!-- FAQ -->
+<div class="faq">
+  <div class="container">
+    <h2>FREQUENTLY ASK QUESTIONS</h2>
+    <p class="faq-desc">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam saepe
+      architecto error corporis aliquam. Cum ipsam a consectetur aut sunt animi, pariatur corporis,
+      eaque, deleniti cupiditate officia.
+    </p>
+
+    <div class="accordion">
+      <div class="accordion-item">
+        <div class="accordion-header">What is the name of your company</div>
+        <div class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quae cumque perspiciatis aperiam accusantium facilis provident aspernatur nisi optio debitis dolorum, est eum eligendi vero aut ad necessitatibus nulla sit labore doloremque magnam! Ex molestiae, dolor tempora, ad fuga minima enim mollitia consequuntur, necessitatibus praesentium eligendi officia recusandae culpa tempore eaque quasi ullam magnam modi quidem in amet. Quod debitis error placeat, tempore quasi aliquid eaque vel facilis culpa voluptate.</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">How much pay for 3 months?</div>
+        <div class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ad laborum expedita. Nostrum iure atque enim quisquam minima distinctio omnis, consequatur aliquam suscipit, quidem, esse aspernatur! Libero, excepturi animi repellendus porro impedit nihil in doloremque a quaerat enim voluptatum, perspiciatis, quas dignissimos maxime ut cum reiciendis eius dolorum voluptatem aliquam!</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">Do I need to register?</div>
+        <div class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ad laborum expedita. Nostrum iure atque enim quisquam minima distinctio omnis, consequatur aliquam suscipit, quidem, esse aspernatur! Libero, excepturi animi repellendus porro impedit nihil in doloremque a quaerat enim voluptatum, perspiciatis, quas dignissimos maxime ut cum reiciendis eius dolorum voluptatem aliquam!</div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-header">Who should I contact in case of support.</div>
+        <div class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ad laborum expedita. Nostrum iure atque enim quisquam minima distinctio omnis, consequatur aliquam suscipit, quidem, esse aspernatur! Libero, excepturi animi repellendus porro impedit nihil in doloremque a quaerat enim voluptatum, perspiciatis, quas dignissimos maxime ut cum reiciendis eius dolorum voluptatem aliquam!</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div style="flex:1; min-width:250px;">
+        <h3>About Homeland</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione.</p>
+      </div>
+      <div style="flex:1; min-width:250px; display:flex; gap:40px;">
+        <div>
+          <h3>Navigations</h3>
+          <ul style="list-style:none; padding:0; margin:0; line-height:2;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="buy.html">Buy</a></li>
+            <li><a href="rent.html">Rent</a></li>
+            <li><a href="properties.html">Properties</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="visibility:hidden;">.</h3>
+          <ul style="list-style:none; padding:0; margin:0; line-height:2;">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="flex:1; min-width:250px;">
+        <h3>Follow Us</h3>
+        <div class="social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="bottom">
+      Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Template made with 
+      <span style="color:red;">❤</span> by <a href="https://colorlib.com" style="color:#fff;">Colorlib</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Hamburger toggle
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.navbar nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+    header.classList.toggle('active');
+    content.classList.toggle('open');
+    if(content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
+  </script>
+</body>
+</html>
